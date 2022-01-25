@@ -83,14 +83,16 @@ void searchName(vector<string> names, vector<int> scores,vector<char> grades,str
 
 void searchGrade(vector<string> names, vector<int> scores,vector<char> grades,string k){
     cout << "---------------------------------"<<endl;
+    int ct = 0;
     char b=k[0];
     int si = names.size();
     for(int i=0;i<si;i++){
         if (b==grades[i]){
             cout << names[i]<<" ("<<scores[i]<<")"<<endl;
-        }
-
-}
+            ct++;
+        } 
+    }
+    if(ct==0) cout << "Cannot found."<<endl;
 
     cout << "---------------------------------"<<endl;
 }
